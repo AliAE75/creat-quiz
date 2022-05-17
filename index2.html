@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="lib/sweetalert2/css/sweetalert2.min.css">
+    <title>Test</title>
+</head>
+
+<body>
+
+    <div id="mbody">
+        <div id="creatq"  style="display: none;">
+            <input type="hidden" id="q-num" value="1">
+            <p>Please Write Your Question Below</p>
+            <input type="text" name="question" id="question" placeholder="Enter Your Question!" value="">
+            <br>
+            <p>Please Write Your Answers Below And Select One Of Them As Correct Answer</p>
+            <input type="text" id="q1" placeholder="Enter First Answer">
+            <input type="radio" id="radio-1" data-q="1" name="answer" value="q1">
+            <br>
+            <input type="text" id="q2" placeholder="Enter Second Answer">
+            <input type="radio" id="radio-2" data-q="1" name="answer" value="q2">
+            <br>
+            <input type="text" id="q3" placeholder="Enter Third Answer">
+            <input type="radio" id="radio-3" data-q="1" name="answer" value="q3">
+            <br>
+            <input type="text" id="q4" placeholder="Enter Fourth Answer">
+            <input type="radio" id="radio-4" data-q="1" name="answer" value="q4">
+            <br>
+
+            <div id="btngruop">
+                <input type="button" id="cbtn" value="Cancel" onclick="canfun()">
+                <input type="button" id="nbtn" value="Done & Go Next" onclick="subfun()">
+                <input type="button" id="ebtn" value="Exit" onclick="donfun()">
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="main-page">
+        <header>
+            <div class="loginhead">
+                <input type="button" id="admin" value="Admin Login" onclick="adminfun()">
+                <h2><span>Test</span> Site</h2>
+            </div>
+        </header>
+
+
+
+
+
+
+
+
+
+
+
+        <section id="login">
+            <form id="logincours">
+                <label for="fname">First name:</label>
+                <br>
+                <input type="text" id="fname" name="fname" placeholder="Name" value="" required>
+                <br>
+                <label for="lname">Last name:</label>
+                <br>
+                <input type="text" id="lname" name="lname" placeholder="Family" value="" required>
+                <br>
+                <label for="lname">Enter Curse name:</label>
+                <br>
+                <select id="cname" required>
+                    <option value="0">Select Cures</option>
+                </select>
+
+                <br>
+                <div id="alerttext">
+
+                </div>
+                <input type="button" id="start" value="Find" onclick="startfunction()">
+                <input type="button" id="join" value="Join Curse" onclick="joinfunction()">
+            </form>
+        </section>
+
+
+
+        <section id="questions">
+            <input type="hidden" id="curent" value="1">
+            <div id="percent"></div>
+
+
+            <div id="QuestionsWillBeHere">
+
+            </div>
+            
+
+
+
+            <input type="button" id="home" value="Cancel Course">
+            <input type="button" id="prev" value="Previous" onclick="prevfun()" style="display: none;">
+            <input type="button" id="next" value="Next" onclick="nextfun()">
+            <input type="button" id="done" value="Done" onclick="done()">
+
+
+        </section>
+
+
+    </section>
+
+    <div id="user-answers" style="display: none;">
+
+    </div>
+</body>
+
+<script src="js/main.js"></script>
+<script src="lib/sweetalert2/js/sweetalert2.min.js"></script>
+
+</html>
